@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div class='jumbotron'>
+        <h3>(Must be a superuser, please check with the site admin)</h3></br>
+        {% if form.errors %}
+            <p>Your username and password did not match</p>
+        {% endif %}
+        <form action="{% url 'login' %}" method='POST'>
+            
+            {% csrf_token %}
+            {{form.as_p }}
+            <input type="submit" class='btn btn-primary' value='login'>
+            <!-- <input type='hidden' name='next' value='{{next}}'> -->
+        </form>
+    </div>
+    
+</body>
+</html>
