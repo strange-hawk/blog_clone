@@ -16,7 +16,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap" rel="stylesheet">
 
 </head>
-<body>
+<body class='loader'>
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light techfont custom-navbar">
         <div class='container'> 
@@ -29,16 +29,16 @@
     </div>
     <ul class='nav navbar-nav navbar-right'>
         {% if user.is_authenticated %}
-        <li>
-            <a href="{% url 'post_new' %}">New Post</a>
+        <li class="nav-item">
+            <a class="nav-link loader"  href="{% url 'post_new' %}">New Post</a>
         </li>
-        <li>
-            <a href="{% url 'post_draft_list' %}">Drafts</a>
+        <li class="nav-item">
+            <a class="nav-link loader"  href="{% url 'post_draft_list' %}">Drafts</a>
         </li>
-        <li>
-            <a href="{% url 'logout' %}">Logout</a>
+        <li class="nav-item">
+            <a class="nav-link loader"  href="{% url 'logout' %}">Logout</a>
         </li>
-        <li>
+        <li class="nav-item">
             <a>Welcome: {{user.username }}</a>
         </li>
         {% else %}
@@ -53,14 +53,14 @@
     
     <!--CONTENT BLOCK-->
     <div class='content container'>
-        <div class='row'>
-            <div class='col-mid-8'>
-                <div class='blog_posts'>
+        <!-- <div class='row'>
+            <div class='col-mid-2'>
+                <div class='blog_posts'> -->
                     {% block content %}
                     {% endblock %}
-                </div>
+                <!-- </div>
             </div>
-        </div>
+        </div> -->
     </div>
     
 </body>

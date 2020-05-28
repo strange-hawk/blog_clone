@@ -3,6 +3,12 @@
     font-size: 1.5em;
      margin-bottom: 10px;
 }
+
+.centerstage{
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .bigbrand{
     font-size: 1.20em;
 }
@@ -13,6 +19,34 @@
     animation:hue 10000ms infinite linear;
    
   }
+  .btn-align{
+      text-align: right;
+      float: right;
+  }
+
+.postdate{
+    text-align: center;
+}
+.posttitle{
+    font-family: 'Russo One',sans-serif;
+    font-size: 3em;
+    text-align: center;
+}
+.postcontent{
+    font-family: 'Montserrat';
+    font-size: 1.5em;
+}
+.btn-comment{
+    position: absolute;
+    right:0px;
+}
+
+
+
+
+
+
+  /* color changer */
   
   @keyframes spinify {
     0% {
